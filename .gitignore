@@ -14,3 +14,9 @@ node_modules/
 # dotenv environment variables file
 .env
 .env.example
+
+# builds
+dist
+
+# development usage
+dev.js
