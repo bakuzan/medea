@@ -1,10 +1,10 @@
 import minimist from "minimist";
 
 export default function parseArgs(argv: string[], opts?: minimist.Opts) {
-  const __values = minimist(argv.slice(2), opts);
+  const values = minimist(argv.slice(2), opts);
 
   return {
-    __values,
+    __values: values,
     any() {
       return (
         Object.keys(this.__values).some(x => x !== "_") ||

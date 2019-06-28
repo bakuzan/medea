@@ -15,10 +15,10 @@ const defaultLoggedProperties = ["option", "shortcut", "description"];
 const getPadLength = (l: string[]) =>
   l.reduce((a, b) => (a.length > b.length ? a : b)).length;
 
-export default function describeArgs(welcome: string, opts: Array<CliOption>) {
-  const __opts = new Map(opts.map(x => [x.option, x]));
+export default function describeArgs(welcome: string, opts: CliOption[]) {
+  const values = new Map(opts.map(x => [x.option, x]));
   return {
-    __opts,
+    __opts: values,
     welcome() {
       const lenH = Math.ceil(welcome.length / 2);
       const half = "*".repeat(

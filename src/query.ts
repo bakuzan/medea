@@ -11,11 +11,11 @@ export default async function query(
 
   try {
     const response = await fetch(endpoint, {
-      method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
       },
+      method: "POST",
       ...queryOptions
     });
 

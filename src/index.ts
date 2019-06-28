@@ -6,10 +6,10 @@ import writeOut from "./writeOut";
 
 import {
   accessAsync,
+  pathFix,
   readdirAsync,
   readFileAsync,
-  writeFileAsync,
-  pathFix
+  writeFileAsync
 } from "./utils";
 
 // Node Asyncs

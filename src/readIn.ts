@@ -1,5 +1,6 @@
+/* tslint:disable:no-bitwise */
 import fs from "fs";
-import { readFileAsync, accessAsync } from "./utils";
+import { accessAsync, readFileAsync } from "./utils";
 
 import { MedeaResponse } from "./interfaces/MedeaResponse";
 import { ReadOptions } from "./interfaces/ReadOptions";
