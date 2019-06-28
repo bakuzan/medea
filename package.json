@@ -21,15 +21,21 @@
     "docs": "typedoc --out docs ./src --mode file",
     "pre-commit": "npm run tslint && npm run pretty",
     "pretty": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
-    "tslint": "tslint --project tsconfig.json --fix"
+    "tslint": "tslint --project tsconfig.json --fix",
+    "test": "npx jest",
+    "test-w": "npx jest -o --watch",
+    "coverage": "npx jest --coverage"
   },
   "types": "dist/src/index.d.ts",
   "author": "bakuzan",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^24.0.15",
     "@types/minimist": "^1.2.0",
     "@types/node-fetch": "^2.3.7",
     "husky": "^2.4.1",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.14.2",

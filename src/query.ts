@@ -5,14 +5,9 @@ import { QueryOptions } from "./interfaces/QueryOptions";
 
 export default async function query(
   endpoint: string,
-  options: QueryOptions
+  options?: QueryOptions
 ): Promise<MedeaResponse> {
-  const {
-    body,
-    dataFn = "json",
-    queryOptions = {},
-    shouldLog = true
-  } = options;
+  const { shouldLog = true, dataFn = "json", ...queryOptions } = options || {};
 
   try {
     const response = await fetch(endpoint, {
@@ -21,7 +16,6 @@ export default async function query(
         Accept: "application/json",
         "Content-Type": "application/json"
       },
-      body: body ? JSON.stringify(body) : undefined,
       ...queryOptions
     });
 

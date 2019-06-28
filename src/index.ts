@@ -12,17 +12,8 @@ import {
   pathFix
 } from "./utils";
 
-export default {
-  // Node Asyncs
-  accessAsync,
-  readdirAsync,
-  readFileAsync,
-  writeFileAsync,
-  // Library features
-  describeArgs,
-  parseArgs,
-  pathFix,
-  query,
-  readIn,
-  writeOut
-};
+// Node Asyncs
+export { accessAsync, readdirAsync, readFileAsync, writeFileAsync };
+
+// Library features
+export { describeArgs, parseArgs, pathFix, query, readIn, writeOut };

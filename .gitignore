@@ -15,8 +15,9 @@ node_modules/
 .env
 .env.example
 
-# builds
+# builds / output
 dist
+coverage
 
 # development usage
 dev.js

@@ -1,6 +1,6 @@
 import minimist from "minimist";
 
-export default function parseArgs(argv: string[], opts: minimist.Opts) {
+export default function parseArgs(argv: string[], opts?: minimist.Opts) {
   const __values = minimist(argv.slice(2), opts);
 
   return {

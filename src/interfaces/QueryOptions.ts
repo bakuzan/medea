@@ -1,7 +1,7 @@
 import { RequestInit } from "node-fetch";
 
-export interface QueryOptions {
-  body?: RequestInit["body"];
+export interface QueryOptions extends RequestInit {
+  shouldLog?: boolean;
   dataFn?:
     | "json"
     | "text"
@@ -9,6 +9,4 @@ export interface QueryOptions {
     | "arrayBuffer"
     | "blob"
     | "textConverted";
-  queryOptions?: RequestInit;
-  shouldLog?: boolean;
 }
