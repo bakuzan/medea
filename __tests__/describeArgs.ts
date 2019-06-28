@@ -1,4 +1,4 @@
-import { spyCall, spyResult } from "./__utils";
+import { spyCall } from "./__utils";
 
 import { describeArgs } from "../src";
 

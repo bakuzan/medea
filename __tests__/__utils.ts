@@ -6,7 +6,14 @@ export function spyCall(
   return s.mock.calls[i][j];
 }
 
-export function spyResult(s: jest.SpyInstance<any, [any?, ...any[]]>, i = 0) {
-  console.log(s.mock.results);
-  return s.mock.results[i].value;
+export function resetSpys(
+  ...spys: Array<jest.SpyInstance<any, [any?, ...any[]]>>
+) {
+  spys.forEach(s => s.mockReset());
+}
+
+export function restoreSpys(
+  ...spys: Array<jest.SpyInstance<any, [any?, ...any[]]>>
+) {
+  spys.forEach(s => s.mockRestore());
 }

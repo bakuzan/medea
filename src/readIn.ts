@@ -21,9 +21,9 @@ function getAccessType(read: boolean, write: boolean) {
 
 export default async function readIn(
   fileName: string,
-  options: ReadOptions
+  options?: ReadOptions
 ): Promise<MedeaResponse> {
-  const { read = true, write = false, shouldLog = true } = options;
+  const { read = true, write = false, shouldLog = true } = options || {};
 
   try {
     const accessType = getAccessType(read, write);

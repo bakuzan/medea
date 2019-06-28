@@ -1,5 +1,3 @@
-import { spyCall, spyResult } from "./__utils";
-
 import { query } from "../src";
 
 jest.mock("node-fetch", () => {
