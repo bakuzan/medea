@@ -19,7 +19,7 @@
   "scripts": {
     "build": "tsc",
     "docs": "typedoc --out docs ./src --mode file",
-    "pre-commit": "npm run tslint && npm run pretty",
+    "pre-commit": "npm run tslint && npm run pretty && npm run test",
     "pretty": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
     "tslint": "tslint --project tsconfig.json --fix",
     "test": "npx jest",
