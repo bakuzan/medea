@@ -2,17 +2,21 @@ import minimist from "minimist";
 
 import { ClientController } from "./interfaces/ClientController";
 import { CliOption } from "./interfaces/CliOption";
+import { ClientOptions } from "./interfaces/ClientOptions";
 import { typedKeys } from "./utils";
 
-const logAsterisks = () =>
-  console.log("*".repeat(process.stdout.columns || 10));
+const logAsterisks = (options: ClientOptions) =>
+  console.log("*".repeat(options.windowColumns || 10));
 
 const defaultLoggedProperties = ["option", "shortcut", "description"];
 
 const getPadLength = (l: string[]) =>
   l.reduce((a, b) => (a.length > b.length ? a : b)).length;
 
-export default function createClient(appName: string): ClientController {
+export default function createClient(
+  appName: string,
+  options: ClientOptions = {}
+): ClientController {
   return {
     __name: appName,
     __opts: new Map<string, CliOption>(),
@@ -74,15 +78,15 @@ export default function createClient(appName: string): ClientController {
       return this;
     },
     helpText() {
-      logAsterisks();
+      logAsterisks(options);
       console.log(`* Options`);
-      logAsterisks();
+      logAsterisks(options);
       console.log(`*\r`);
       Array.from(this.__opts.entries()).forEach(([k]) => {
         this.log(k);
         console.log(`*\r`);
       });
-      logAsterisks();
+      logAsterisks(options);
 
       return this;
     },
