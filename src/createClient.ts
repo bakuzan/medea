@@ -32,14 +32,33 @@ export default function createClient(appName: string): ClientController {
       );
     },
     has(key: string) {
-      return this.__values.hasOwnProperty(key);
+      const data = this.__opts.get(key);
+      if (!data) {
+        throw new Error(`Key does not exist. (Key: ${key})`);
+      }
+
+      const shortKey = data.shortcut || key;
+
+      return (
+        this.__values.hasOwnProperty(key) ||
+        this.__values.hasOwnProperty(shortKey)
+      );
     },
     get(key?: string, defaultValue?: any) {
       if (!key) {
         return this.__values;
       }
 
-      return this.__values[key] || defaultValue;
+      const data = this.__opts.get(key);
+      if (!data) {
+        return defaultValue;
+      }
+
+      const shortValue = data.shortcut
+        ? this.__values[data.shortcut]
+        : undefined;
+
+      return this.__values[key] || shortValue || defaultValue;
     },
     name() {
       return this.__name;

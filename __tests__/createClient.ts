@@ -4,8 +4,9 @@ import { createClient } from "../src";
 
 const output = {
   _: [],
-  jest: true,
-  medea: "hello"
+  help: true,
+  two: true,
+  m: "hello"
 };
 
 jest.mock("minimist", () => {
@@ -17,7 +18,7 @@ describe("createClient", () => {
   const consoleSpy = jest.spyOn(console, "log");
 
   const NAME = "Medea";
-  const values = ["", "", "jest", "medea"];
+  const values = ["", "", "help", "two", "m"];
   let cli = createClient(NAME);
 
   beforeEach(() => {
@@ -37,6 +38,11 @@ describe("createClient", () => {
         option: "final",
         shortcut: "",
         description: "The final option"
+      })
+      .addOption({
+        option: "medea",
+        shortcut: "m",
+        description: "test option"
       });
 
     consoleSpy.mockReset();
@@ -139,8 +145,9 @@ describe("createClient", () => {
   it("should check if key exists", () => {
     const args = cli.parse(values);
 
-    expect(args.has("jest")).toEqual(true);
-    expect(args.has("jester")).toEqual(false);
+    expect(args.has("two")).toEqual(true);
+    expect(args.has("medea")).toEqual(true);
+    expect(() => args.has("jester")).toThrow();
   });
 
   it("should return values", () => {
@@ -152,7 +159,7 @@ describe("createClient", () => {
   it("should return value of key", () => {
     const args = cli.parse(values);
 
-    expect(args.get("jest")).toEqual(true);
+    expect(args.get("two")).toEqual(true);
     expect(args.get("medea")).toEqual("hello");
     expect(args.get("jester")).toEqual(undefined);
   });
