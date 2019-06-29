@@ -1,8 +1,8 @@
 import minimist from "minimist";
 
 import { ClientController } from "./interfaces/ClientController";
-import { CliOption } from "./interfaces/CliOption";
 import { ClientOptions } from "./interfaces/ClientOptions";
+import { CliOption } from "./interfaces/CliOption";
 import { typedKeys } from "./utils";
 
 const logAsterisks = (options: ClientOptions) =>
