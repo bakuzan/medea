@@ -6,7 +6,7 @@ import { CliOption } from "./interfaces/CliOption";
 import { typedKeys } from "./utils";
 
 const logAsterisks = (options: ClientOptions) =>
-  console.log("*".repeat(options.windowColumns || 10));
+  console.log("*".repeat(options.windowColumns || 100));
 
 const defaultLoggedProperties = ["option", "shortcut", "description"];
 
@@ -70,7 +70,7 @@ export default function createClient(
     welcome() {
       const lenH = Math.ceil(appName.length / 2);
       const half = "*".repeat(
-        Math.floor((process.stdout.columns || 10) / 2) - 1 - lenH
+        Math.floor((options.windowColumns || 100) / 2) - 1 - lenH
       );
 
       console.log(`${half} ${appName} ${half}`);
@@ -108,16 +108,16 @@ export default function createClient(
       return this;
     },
     validate(key: string, other?: any): boolean {
-      const data = this.__opts.get(key);
-      if (!data) {
+      const option = this.__opts.get(key);
+      if (!option) {
         throw new Error(`Key does not exist. (Key: ${key})`);
       }
 
-      if (!data.validate) {
+      if (!option.validate) {
         return true;
       }
 
-      return data.validate(data, other);
+      return option.validate(option, this.get(key), other);
     }
   };
 }
