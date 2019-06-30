@@ -18,13 +18,15 @@
   },
   "scripts": {
     "build": "tsc",
-    "docs": "typedoc --out docs ./src --mode file",
     "pre-commit": "npm run tslint && npm run pretty && npm run test",
     "pretty": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
     "tslint": "tslint --project tsconfig.json --fix",
     "test": "npx jest",
     "test-w": "npx jest -o --watch",
-    "coverage": "npx jest --coverage"
+    "coverage": "npx jest --coverage",
+    "docs": "typedoc --out docs src",
+    "disable-jekyll": "touch ./docs/.nojekyll",
+    "deploy": "rmdir /s /q docs && npm run docs && npm run disable-jekyll && gh-pages --dotfiles -d docs"
   },
   "types": "dist/src/index.d.ts",
   "author": "bakuzan",
@@ -33,6 +35,7 @@
     "@types/jest": "^24.0.15",
     "@types/minimist": "^1.2.0",
     "@types/node-fetch": "^2.3.7",
+    "gh-pages": "^2.0.1",
     "husky": "^2.7.0",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",

@@ -18,6 +18,7 @@ node_modules/
 # builds / output
 dist
 coverage
+docs
 
 # development usage
 dev.js
