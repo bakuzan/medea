@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> medea</h1>
+			<h1>medea</h1>
 		</div>
 	</div>
 </header>
@@ -68,10 +68,15 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class"><a href="classes/medeaclientcontroller.html" class="tsd-kind-icon">Medea<wbr>Client<wbr>Controller</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface"><a href="interfaces/clioption.html" class="tsd-kind-icon">Cli<wbr>Option</a></li>
-								<li class="tsd-kind-interface"><a href="interfaces/clientcontroller.html" class="tsd-kind-icon">Client<wbr>Controller</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/clientoptions.html" class="tsd-kind-icon">Client<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/medearesponse.html" class="tsd-kind-icon">Medea<wbr>Response</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/queryoptions.html" class="tsd-kind-icon">Query<wbr>Options</a></li>
@@ -82,7 +87,6 @@
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable"><a href="globals.html#accessasync" class="tsd-kind-icon">access<wbr>Async</a></li>
-								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#defaultloggedproperties" class="tsd-kind-icon">default<wbr>Logged<wbr>Properties</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#readfileasync" class="tsd-kind-icon">read<wbr>File<wbr>Async</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#readdirasync" class="tsd-kind-icon">readdir<wbr>Async</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#writefileasync" class="tsd-kind-icon">write<wbr>File<wbr>Async</a></li>
@@ -92,9 +96,7 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="globals.html#createclient" class="tsd-kind-icon">create<wbr>Client</a></li>
-								<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#getaccesstype" class="tsd-kind-icon">get<wbr>Access<wbr>Type</a></li>
-								<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#getpadlength" class="tsd-kind-icon">get<wbr>Pad<wbr>Length</a></li>
-								<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#logasterisks" class="tsd-kind-icon">log<wbr>Asterisks</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#getaccesstype" class="tsd-kind-icon">get<wbr>Access<wbr>Type</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#pathfix" class="tsd-kind-icon">path<wbr>Fix</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#query" class="tsd-kind-icon">query</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#readin" class="tsd-kind-icon">read<wbr>In</a></li>
@@ -110,50 +112,40 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="accessasync" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> access<wbr>Async</h3>
-					<div class="tsd-signature tsd-kind-icon">access<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">__promisify__</span><span class="tsd-signature-symbol"> =&nbsp;promisify(fs.access)</span></div>
+					<div class="tsd-signature tsd-kind-icon">access<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">__promisify__</span><span class="tsd-signature-symbol"> = promisify(fs.access)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/utils.ts#L5">utils.ts:5</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
-					<a name="defaultloggedproperties" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Logged<wbr>Properties</h3>
-					<div class="tsd-signature tsd-kind-icon">default<wbr>Logged<wbr>Properties<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&quot;option&quot;, &quot;shortcut&quot;, &quot;description&quot;]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/createClient.ts#L11">createClient.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/bakuzan/medea/blob/0a0acc5/src/utils.ts#L5">src/utils.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="readfileasync" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> read<wbr>File<wbr>Async</h3>
-					<div class="tsd-signature tsd-kind-icon">read<wbr>File<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">__promisify__</span><span class="tsd-signature-symbol"> =&nbsp;promisify(fs.readFile)</span></div>
+					<div class="tsd-signature tsd-kind-icon">read<wbr>File<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">__promisify__</span><span class="tsd-signature-symbol"> = promisify(fs.readFile)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/utils.ts#L7">utils.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/bakuzan/medea/blob/0a0acc5/src/utils.ts#L7">src/utils.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="readdirasync" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> readdir<wbr>Async</h3>
-					<div class="tsd-signature tsd-kind-icon">readdir<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">__promisify__</span><span class="tsd-signature-symbol"> =&nbsp;promisify(fs.readdir)</span></div>
+					<div class="tsd-signature tsd-kind-icon">readdir<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">__promisify__</span><span class="tsd-signature-symbol"> = promisify(fs.readdir)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/utils.ts#L6">utils.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/bakuzan/medea/blob/0a0acc5/src/utils.ts#L6">src/utils.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="writefileasync" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> write<wbr>File<wbr>Async</h3>
-					<div class="tsd-signature tsd-kind-icon">write<wbr>File<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">__promisify__</span><span class="tsd-signature-symbol"> =&nbsp;promisify(fs.writeFile)</span></div>
+					<div class="tsd-signature tsd-kind-icon">write<wbr>File<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">__promisify__</span><span class="tsd-signature-symbol"> = promisify(fs.writeFile)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/utils.ts#L8">utils.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/bakuzan/medea/blob/0a0acc5/src/utils.ts#L8">src/utils.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -164,13 +156,13 @@
 					<a name="createclient" class="tsd-anchor"></a>
 					<h3>create<wbr>Client</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Client<span class="tsd-signature-symbol">(</span>appName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="interfaces/clientoptions.html" class="tsd-signature-type">ClientOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/clientcontroller.html" class="tsd-signature-type">ClientController</a></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Client<span class="tsd-signature-symbol">(</span>appName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="interfaces/clientoptions.html" class="tsd-signature-type">ClientOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/medeaclientcontroller.html" class="tsd-signature-type">MedeaClientController</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/createClient.ts#L16">createClient.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/0a0acc5/src/createClient.ts#L4">src/createClient.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -179,24 +171,24 @@
 									<h5>appName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="interfaces/clientoptions.html" class="tsd-signature-type">ClientOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="interfaces/clientoptions.html" class="tsd-signature-type">ClientOptions</a><span class="tsd-signature-symbol"> = {}</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="interfaces/clientcontroller.html" class="tsd-signature-type">ClientController</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="classes/medeaclientcontroller.html" class="tsd-signature-type">MedeaClientController</a></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="getaccesstype" class="tsd-anchor"></a>
 					<h3>get<wbr>Access<wbr>Type</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-function">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Access<wbr>Type<span class="tsd-signature-symbol">(</span>read<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, write<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/readIn.ts#L8">readIn.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/0a0acc5/src/readIn.ts#L8">src/readIn.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -212,52 +204,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
-					<a name="getpadlength" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Pad<wbr>Length</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Pad<wbr>Length<span class="tsd-signature-symbol">(</span>l<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/createClient.ts#L13">createClient.ts:13</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>l: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
-					<a name="logasterisks" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> log<wbr>Asterisks</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">log<wbr>Asterisks<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="interfaces/clientoptions.html" class="tsd-signature-type">ClientOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/createClient.ts#L8">createClient.ts:8</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>options: <a href="interfaces/clientoptions.html" class="tsd-signature-type">ClientOptions</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="pathfix" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> path<wbr>Fix</h3>
@@ -268,7 +214,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/utils.ts#L10">utils.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/0a0acc5/src/utils.ts#L10">src/utils.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -291,7 +237,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/query.ts#L6">query.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/0a0acc5/src/query.ts#L6">src/query.ts:6</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -317,7 +263,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/readIn.ts#L22">readIn.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/0a0acc5/src/readIn.ts#L22">src/readIn.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -337,13 +283,13 @@
 					<a name="typedkeys" class="tsd-anchor"></a>
 					<h3>typed<wbr>Keys</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">typed<wbr>Keys&lt;T&gt;<span class="tsd-signature-symbol">(</span>o<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">typed<wbr>Keys&lt;T&gt;<span class="tsd-signature-symbol">(</span>o<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/utils.ts#L12">utils.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/0a0acc5/src/utils.ts#L12">src/utils.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -358,7 +304,7 @@
 									<h5>o: <span class="tsd-signature-type">T</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">keyof T</span><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -372,7 +318,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/8c592f7/src/writeOut.ts#L5">writeOut.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/bakuzan/medea/blob/0a0acc5/src/writeOut.ts#L5">src/writeOut.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -384,7 +330,7 @@
 									<h5>data: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> shouldLog: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> shouldLog: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/medearesponse.html" class="tsd-signature-type">MedeaResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -403,11 +349,11 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/clioption.html" class="tsd-kind-icon">Cli<wbr>Option</a>
+					<li class=" tsd-kind-class">
+						<a href="classes/medeaclientcontroller.html" class="tsd-kind-icon">Medea<wbr>Client<wbr>Controller</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/clientcontroller.html" class="tsd-kind-icon">Client<wbr>Controller</a>
+						<a href="interfaces/clioption.html" class="tsd-kind-icon">Cli<wbr>Option</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/clientoptions.html" class="tsd-kind-icon">Client<wbr>Options</a>
@@ -424,9 +370,6 @@
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#accessasync" class="tsd-kind-icon">access<wbr>Async</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#defaultloggedproperties" class="tsd-kind-icon">default<wbr>Logged<wbr>Properties</a>
-					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#readfileasync" class="tsd-kind-icon">read<wbr>File<wbr>Async</a>
 					</li>
@@ -439,14 +382,8 @@
 					<li class=" tsd-kind-function">
 						<a href="globals.html#createclient" class="tsd-kind-icon">create<wbr>Client</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
+					<li class=" tsd-kind-function">
 						<a href="globals.html#getaccesstype" class="tsd-kind-icon">get<wbr>Access<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#getpadlength" class="tsd-kind-icon">get<wbr>Pad<wbr>Length</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-not-exported">
-						<a href="globals.html#logasterisks" class="tsd-kind-icon">log<wbr>Asterisks</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#pathfix" class="tsd-kind-icon">path<wbr>Fix</a>
@@ -480,6 +417,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -528,7 +466,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
