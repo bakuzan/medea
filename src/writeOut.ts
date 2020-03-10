@@ -1,6 +1,6 @@
-import { writeFileAsync } from "./utils";
+import { writeFileAsync } from './utils';
 
-import { MedeaResponse } from "./interfaces/MedeaResponse";
+import { MedeaResponse } from './interfaces/MedeaResponse';
 
 export default async function writeOut(
   fileName: string,

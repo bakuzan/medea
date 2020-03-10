@@ -1,6 +1,6 @@
 {
   "name": "medea",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Node command line utilities library",
   "main": "dist/index.js",
   "homepage": "https://github.com/bakuzan/medea#readme",
@@ -22,8 +22,8 @@
     "pretty": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
     "tslint": "tslint --project tsconfig.json --fix",
     "test": "npx jest",
-    "test-w": "npx jest -o --watch",
-    "coverage": "npx jest --coverage",
+    "test:watch": "npx jest -o --watch",
+    "test:coverage": "npx jest --coverage",
     "docs": "typedoc --out docs src",
     "disable-jekyll": "touch ./docs/.nojekyll",
     "deploy": "rmdir /s /q docs && npm run docs && npm run disable-jekyll && gh-pages --dotfiles -d docs"
@@ -32,21 +32,21 @@
   "author": "bakuzan",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^24.0.15",
+    "@types/jest": "^25.1.4",
     "@types/minimist": "^1.2.0",
-    "@types/node-fetch": "^2.3.7",
+    "@types/node-fetch": "^2.5.5",
     "gh-pages": "^2.0.1",
-    "husky": "^2.7.0",
-    "jest": "^24.8.0",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.18.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.18.0",
-    "typedoc": "^0.15.0",
-    "typescript": "^3.5.2"
+    "typedoc": "^0.16.11",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "minimist": "^1.2.0",
     "node-fetch": "^2.6.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   }
 }
