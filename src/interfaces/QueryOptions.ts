@@ -1,12 +1,12 @@
-import { RequestInit } from "node-fetch";
+import { RequestInit } from 'node-fetch';
 
 export interface QueryOptions extends RequestInit {
   shouldLog?: boolean;
   dataFn?:
-    | "json"
-    | "text"
-    | "buffer"
-    | "arrayBuffer"
-    | "blob"
-    | "textConverted";
+    | 'json'
+    | 'text'
+    | 'buffer'
+    | 'arrayBuffer'
+    | 'blob'
+    | 'textConverted';
 }

@@ -1,4 +1,4 @@
-import minimist from "minimist";
+import minimist from 'minimist';
 
 export interface CliOption {
   option: string;

@@ -1,6 +1,6 @@
-import minimist from "minimist";
+import minimist from 'minimist';
 
-import { CliOption } from "./CliOption";
+import { CliOption } from './CliOption';
 
 export interface ClientController {
   __name: string;

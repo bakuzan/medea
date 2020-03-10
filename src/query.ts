@@ -1,21 +1,21 @@
-import fetch from "node-fetch";
+import fetch from 'node-fetch';
 
-import { MedeaResponse } from "./interfaces/MedeaResponse";
-import { QueryOptions } from "./interfaces/QueryOptions";
+import { MedeaResponse } from './interfaces/MedeaResponse';
+import { QueryOptions } from './interfaces/QueryOptions';
 
 export default async function query(
   endpoint: string,
   options?: QueryOptions
 ): Promise<MedeaResponse> {
-  const { shouldLog = true, dataFn = "json", ...queryOptions } = options || {};
+  const { shouldLog = true, dataFn = 'json', ...queryOptions } = options || {};
 
   try {
     const response = await fetch(endpoint, {
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
       },
-      method: "POST",
+      method: 'POST',
       ...queryOptions
     });
 

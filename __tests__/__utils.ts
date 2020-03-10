@@ -9,11 +9,11 @@ export function spyCall(
 export function resetSpys(
   ...spys: Array<jest.SpyInstance<any, [any?, ...any[]]>>
 ) {
-  spys.forEach(s => s.mockReset());
+  spys.forEach((s) => s.mockReset());
 }
 
 export function restoreSpys(
   ...spys: Array<jest.SpyInstance<any, [any?, ...any[]]>>
 ) {
-  spys.forEach(s => s.mockRestore());
+  spys.forEach((s) => s.mockRestore());
 }

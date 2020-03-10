@@ -13,12 +13,11 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "npm run pre-commit"
+      "pre-commit": "npm run tslint && npm run pretty && npm run test"
     }
   },
   "scripts": {
     "build": "tsc",
-    "pre-commit": "npm run tslint && npm run pretty && npm run test",
     "pretty": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
     "tslint": "tslint --project tsconfig.json --fix",
     "test": "npx jest",
