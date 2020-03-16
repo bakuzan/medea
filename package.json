@@ -44,7 +44,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.2",
     "node-fetch": "^2.6.0",
     "prettier": "^1.19.1"
   }
