@@ -56,7 +56,9 @@ export default class MedeaClientController {
     );
 
     const missing = requiredOpts.filter(
-      (x) => this.values[x.option] === undefined
+      (x) =>
+        this.values[x.option] === undefined &&
+        (x.shortcut === undefined || this.values[x.shortcut] === undefined)
     );
 
     return missing;
