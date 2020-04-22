@@ -242,6 +242,19 @@ describe('createClient', () => {
     expect(med.missingRequiredOptions()).toEqual([]);
   });
 
+  it('should return empty array when no missing required options (shortcut)', () => {
+    const med = createClient('test').addOption({
+      option: 'medea',
+      shortcut: 'm',
+      description: 'testing required',
+      required: () => true
+    });
+
+    med.parse(['', '', 'two', 'm'], {});
+
+    expect(med.missingRequiredOptions()).toEqual([]);
+  });
+
   it('should return missing required options ', () => {
     const requiredOption = {
       option: 'required',
