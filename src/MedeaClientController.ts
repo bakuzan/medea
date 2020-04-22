@@ -49,10 +49,11 @@ export default class MedeaClientController {
 
   missingRequiredOptions() {
     const values = Array.from(this.options.values());
+
     const requiredOpts = values.filter(
       (x) =>
         x.required === true ||
-        (typeof x.required === 'function' && x.required(this))
+        (typeof x.required === 'function' && x.required(this.options))
     );
 
     const missing = requiredOpts.filter(
