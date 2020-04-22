@@ -2,9 +2,10 @@ import minimist from 'minimist';
 
 import { ClientOptions } from './interfaces/ClientOptions';
 import { CliOption } from './interfaces/CliOption';
+import { MedeaClient } from 'interfaces/MedeaClient';
 import { typedKeys } from './utils';
 
-export default class MedeaClientController {
+export default class MedeaClientController implements MedeaClient {
   private name: string;
   private options: Map<string, CliOption>;
   private values: minimist.ParsedArgs;
@@ -48,12 +49,13 @@ export default class MedeaClientController {
   }
 
   missingRequiredOptions() {
+    const client = this as MedeaClientController;
     const values = Array.from(this.options.values());
 
-    const requiredOpts = values.filter(
+    const requiredOpts: CliOption[] = values.filter(
       (x) =>
         x.required === true ||
-        (typeof x.required === 'function' && x.required(this.options))
+        (typeof x.required === 'function' && x.required(client))
     );
 
     const missing = requiredOpts.filter(
