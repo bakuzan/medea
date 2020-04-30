@@ -266,4 +266,31 @@ describe('createClient', () => {
 
     expect(cli.missingRequiredOptions()).toEqual([requiredOption]);
   });
+
+  it('should throw error if key does not exist', () => {
+    expect(() => cli.isRequired('jest')).toThrow();
+  });
+
+  it('should return false if no required to call', () => {
+    const result = cli.isRequired('help');
+
+    expect(result).toBeFalsy();
+  });
+
+  it('should call required', () => {
+    const fakeRequiredFn = jest.fn(() => false);
+    const option = {
+      option: 'zim',
+      shortcut: 'z',
+      description: 'zim option',
+      required: fakeRequiredFn
+    };
+
+    cli.addOption(option);
+
+    const result = cli.isRequired('zim');
+
+    expect(fakeRequiredFn).toHaveBeenCalled();
+    expect(result).toBe(false);
+  });
 });

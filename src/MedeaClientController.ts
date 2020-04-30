@@ -137,6 +137,7 @@ export default class MedeaClientController implements MedeaClient {
 
       typedKeys(d).forEach((k) => {
         const kStr = k as string;
+
         if (props.includes(kStr)) {
           const v = d[k];
           console.log(`* ${kStr.padStart(padNum, ' ')}: `, v || 'None');
@@ -158,6 +159,24 @@ export default class MedeaClientController implements MedeaClient {
     }
 
     return option.validate(option, this.get(key), other);
+  }
+
+  isRequired(key: string): boolean {
+    const option = this.options.get(key);
+    if (!option) {
+      throw new Error(`Key does not exist. (Key: ${key})`);
+    }
+
+    if (!option.required) {
+      return false;
+    }
+
+    const client = this as MedeaClientController;
+
+    return (
+      option.required === true ||
+      (typeof option.required === 'function' && option.required(client))
+    );
   }
 
   private logAsterisks() {
