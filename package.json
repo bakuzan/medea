@@ -1,6 +1,6 @@
 {
   "name": "medea",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Node command line utilities library",
   "main": "dist/index.js",
   "homepage": "https://github.com/bakuzan/medea#readme",
@@ -31,21 +31,25 @@
   "author": "bakuzan",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^25.1.4",
+    "@types/cheerio": "^0.22.21",
+    "@types/jest": "^26.0.4",
     "@types/minimist": "^1.2.0",
-    "@types/node-fetch": "^2.5.5",
-    "gh-pages": "^2.0.1",
-    "husky": "^4.2.3",
-    "jest": "^25.2.4",
-    "ts-jest": "^25.3.0",
-    "tslint": "^6.0.0",
+    "@types/node-fetch": "^2.5.7",
+    "gh-pages": "^3.1.0",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.2",
+    "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
-    "typedoc": "^0.16.11",
-    "typescript": "^3.8.3"
+    "typedoc": "^0.17.8",
+    "typescript": "^3.9.6"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "got": "^11.5.0",
     "minimist": "^1.2.5",
     "node-fetch": "^2.6.0",
-    "prettier": "^1.19.1"
+    "prettier": "^2.0.5",
+    "stdio": "^2.1.1"
   }
 }
