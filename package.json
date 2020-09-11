@@ -48,7 +48,7 @@
     "cheerio": "^1.0.0-rc.3",
     "got": "11.4.0",
     "minimist": "^1.2.5",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "prettier": "^2.0.5",
     "stdio": "^2.1.1"
   }
