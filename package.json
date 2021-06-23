@@ -31,11 +31,11 @@
   "author": "bakuzan",
   "license": "ISC",
   "devDependencies": {
-    "@types/cheerio": "^0.22.21",
+    "@types/cheerio": "^0.22.29",
     "@types/jest": "^26.0.4",
     "@types/minimist": "^1.2.0",
     "@types/node-fetch": "^2.5.7",
-    "gh-pages": "^3.1.0",
+    "gh-pages": "^3.2.3",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "ts-jest": "^26.1.2",
@@ -45,7 +45,7 @@
     "typescript": "^3.9.6"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
+    "cheerio": "^1.0.0-rc.10",
     "got": "11.4.0",
     "minimist": "^1.2.5",
     "node-fetch": "^2.6.1",

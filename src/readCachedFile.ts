@@ -27,7 +27,7 @@ async function fetchPage(
     cacheStaleTime?: number | null;
     exitOnError?: true;
   }
-): Promise<CheerioStatic>;
+): Promise<cheerio.Root>;
 async function fetchPage(
   key: string,
   url: string,
@@ -36,7 +36,7 @@ async function fetchPage(
     cacheStaleTime?: number | null;
     exitOnError: false;
   }
-): Promise<CheerioStatic | null>;
+): Promise<cheerio.Root | null>;
 async function fetchPage(key: string, url: string, opts: FetchPageOptions) {
   const cacheDirectory = opts.cacheDirectory;
   const cacheStaleTime = opts.cacheStaleTime ?? defaultOptions.cacheStaleTime;
