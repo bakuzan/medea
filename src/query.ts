@@ -19,7 +19,7 @@ export default async function query(
       ...queryOptions
     });
 
-    const result = await response[dataFn]();
+    const result = (await response[dataFn]()) as any;
 
     if (result.errors) {
       const error = result.errors[0];
@@ -33,7 +33,7 @@ export default async function query(
     return { success: true, data: result.data ? result.data : result };
   } catch (error) {
     if (shouldLog) {
-      console.log(`Fetch failed.\n\r${error.message}`);
+      console.log(`Fetch failed.\n\r${(error as Error).message}`);
     }
 
     return { success: false, error };
