@@ -1,29 +1,26 @@
 import { query } from '../src';
 
-jest.mock('node-fetch', () => {
-  return jest.fn((endp) => {
-    let value: any = null;
-    let data = { jest: 'medea' };
+jest.spyOn(global, 'fetch').mockImplementation((endp) => {
+  let value: any = null;
+  let data = { jest: 'medea' };
 
-    switch (endp) {
-      case 'data':
-        value = { data };
-        break;
-      case 'errors':
-        value = { errors: [{ message: 'error' }] };
-        break;
-      case 'throw':
-        throw new Error('thrown error');
-        break;
-      default:
-        value = data;
-        break;
-    }
+  switch (endp) {
+    case 'data':
+      value = { data };
+      break;
+    case 'errors':
+      value = { errors: [{ message: 'error' }] };
+      break;
+    case 'throw':
+      throw new Error('thrown error');
+    default:
+      value = data;
+      break;
+  }
 
-    return Promise.resolve({
-      json: () => value
-    });
-  });
+  return Promise.resolve({
+    json: () => value
+  } as Response);
 });
 
 describe('query', () => {
@@ -35,6 +32,7 @@ describe('query', () => {
 
   afterAll(() => {
     consoleSpy.mockRestore();
+    jest.restoreAllMocks();
   });
 
   it('should call fetch successfully', async () => {

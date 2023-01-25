@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 import { MedeaResponse } from './interfaces/MedeaResponse';
 import { QueryOptions } from './interfaces/QueryOptions';
 
